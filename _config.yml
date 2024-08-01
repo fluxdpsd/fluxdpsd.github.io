@@ -9,5 +9,5 @@ baseurl: /fluxdpsd.gitub.io/      # place folder name if the site is served in a
 
 
 # Build settings
-remote_theme: jekyll/minima
+theme: jekyll-theme-minimal
 
