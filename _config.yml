@@ -1,0 +1,9 @@
+# Site settings
+title: Flux
+author:
+  name: Human
+description: "Flux"
+
+# Build settings
+remote_theme: jekyll/minima
+
