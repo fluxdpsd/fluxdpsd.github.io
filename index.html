@@ -2,263 +2,251 @@
 <html lang="en">
   <head>
     <title>Flux</title>
-	  <link rel="icon" href="https://i.imgur.com/W7mexk0.jpeg" type="image/jpg">
+    <link rel="icon" href="https://i.imgur.com/W7mexk0.jpeg" type="image/jpg">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
     <link rel="stylesheet" href="css/aos.css">
-
     <link rel="stylesheet" href="css/ionicons.min.css">
-    
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+    .about-mf .box-shadow-full {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    
+    .about-mf .about-img {
+      margin-bottom: 2rem;
+    }
+
+    .skill-mf .progress {
+      margin: .5rem 0 1.2rem 0;
+      border-radius: 0;
+      height: .7rem;
+    }
+
+    .skill-mf .progress .progress-bar {
+      height: .7rem;
+      background-color: #160314;
+    }
+
+    /* Animation styles for typing */
+    #typing-animation {
+      position: absolute;
+      font-size: 30px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      white-space: nowrap;
+      top: -60px;
+      left: 0;
+      animation: typing 4s steps(30, end) forwards;
+      margin-left: 17%;
+    }
+
+    /* Line for the logo to rotate over */
+    .line {
+        width: 513px;
+        height: 2px;
+        background-color: grey;
+        position: relative;
+        top: -60px;
+        margin-left: 17%;
+    }
+
+    /* Rotating logo */
+    .rotating-flux-logo {
+        width: 300px;
+        height: 300px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -280px;
+        left: 0;
+        animation: rollAndMove 4s ease-in-out forwards;
+    }
+
+    @keyframes rollAndMove {
+        0% {
+            transform: rotate(0deg);
+            left: 0;
+        }
+        100% {
+            transform: rotate(360deg);
+            left: 70%;
+        }
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 900px;
+      }
+    }
+
+    .animation-container {
+        position: relative;
+        width: 900px;
+        height: 80px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Media queries for responsiveness */
+
+    @media (max-width: 1200px) {
+        .animation-container {
+            width: 80%;
+        }
+        .rotating-flux-logo {
+            width: 200px;
+            height: 200px;
+            margin-left: 40px;
 
 
-<style>
+        }
+        .line {
+            width: 1200px;
+            top: -27px;
+        }
+        #typing-animation {
+            font-size: 20px;
+            top: -27px;
+            left:-100px;
+            margin-left: 20px;
+        }
+        #mainheading{
+        	 left: -100px;
+        }
+    }
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
+    @media (max-width: 768px) {
 
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+        .animation-container {
+            width: 100%;
+            flex-direction: column;
+            height: auto;
 
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
+        }
+        .rotating-flux-logo {
+            width: 0px;
+            height: 0px;
+            
+            
+        }
+        .line {
+            top:2px;
+        }
+        #typing-animation {
+            font-size: 14px;
+            
+            left:-140px;
+        }
+    }
 
-.about-mf .about-img img {
-  margin-left: 10px;
-}
+    @media (max-width: 576px) {
+        .animation-container {
+            width: 100%;
+        }
+        .rotating-flux-logo {
+            width: 0px;
+            height: 0px;
+        }
+        .line {
+            width: 100%;
+        }
+        #typing-animation {
+            font-size: 16px;
+            left:-220px;
+        }
+    }
 
+    @media (max-width: 400px) {
+        .rotating-flux-logo {
+            width: 0px;
+            height: 0px;
+        }
+        #typing-animation {
+            font-size: 14px;
+            left:-100px;
+        }
+    }
 
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
-
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #160314;
-}
-
-
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #cccccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
-
-
-/* project image zoom effect */
-
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
-
-
-</style>
-
-
+    </style>
   </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
+
+  <body>
+
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">FLUX</a>
+          <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+          </button>
 
-		FLUX</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav nav ml-auto">
+              <li class="nav-item"><a href="#home-section" class="nav-link"><span>HOME</span></a></li>
+              <li class="nav-item"><a href="#about-section" class="nav-link"><span>ABOUT</span></a></li>
+              <li class="nav-item"><a href="#resume-section" class="nav-link"><span>THE TEAM</span></a></li>
+              <li class="nav-item"><a href="#project-section" class="nav-link"><span>EVENTS</span></a></li>
+              <li class="nav-item"><a href="#contact-section" class="nav-link"><span>CONTACT</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>HOME</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>ABOUT</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>THE TEAM</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>EVENTS</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>CONTACT</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		
-			            <h1 class="mb-4 mt-3"><span>FLUX</span></h1>
+      <section id="home-section" class="hero">
+          <div class="home-slider owl-carousel">
+              <div class="slider-item">
+                  <div class="overlay"></div>
+                  <div class="container">
+                      <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                              <div class="text">
+                                  <h1 class="mb-4 mt-3" id="mainheading" style="font-size: 200px; margin-left: 30%;"><span>FLUX</span></h1>
+                                  <div class="animation-container">
+                                      <div id="rotating-flux-logo" class="rotating-flux-logo" style="background-image:url(https://i.ibb.co/hR65N61/62787098724.png)";></div>
+                                      <div class="line"></div>
+                                      <span id="typing-animation"></span>
+                                  </div>
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
+                                  <script>
+                                      const typingAnimationElement = document.getElementById('typing-animation');
+                                      const typingText = "The Physics Club of DPS DWARKA";
 
-						<script>
+                                      function playTypingAnimation(text) {
+                                          for (let i = 0; i < text.length; i++) {
+                                              setTimeout(() => {
+                                                  typingAnimationElement.textContent += text[i];
+                                              }, i * 120);
+                                          }
+                                      }
 
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
+                                      playTypingAnimation(typingText);
+                                  </script>
 
-						// Create an array of typing text
-						const typingTexts = [
-						'The Physics Club of DPS DWARKA  ',
-						'The Physics Club of DPS DWARKA  ',
-							];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            
-						
-						<!-- <br> -->
-			            
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
 
 
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="i.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-			
-									  </div>
-									</div>
-								  </div>
-
-								
-									
-									
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About Us</h1>
-								<h2 class="mb-4">About Us</h2>
-								
-								<p>Welcome to Flux! For us, physics isn't just a subject; it's an epic adventure! Institutionalized in 2016 by students at Delhi Public School Dwarka.  </p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<p>Here curiosity meets exploration and the wonders of the universe come alive! Our club is a vibrant community of students who are passionate about understanding the fundamental principles that govern the natural world. Whether you're a seasoned physicist or just beginning to explore the mysteries of physics, there's a place for you here.</p>
-								</ul>
-							</div>
-						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-					
-								<p><a href="https://linkedin.com/company/fluxclub" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
 
 
 
@@ -274,7 +262,7 @@
                     <!-- Member 1 -->
                     <div class="member" style="width: 200px; text-align: center;">
                         <div class="image-wrapper" style="width: 200px; height: 200px; margin: 0 auto; border-radius: 50%; overflow: hidden; border: 2px solid #e6ac42;">
-                            <img src="https://i.postimg.cc/htMGGRZs/IMG-20231014-WA0013-2.jpg" alt="Member 1" style="width: 100%; height: 100%;">
+                            <img src="" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <h3 style="margin-top: 10px; font-size: 18px;">ATHARV SAXENA</h3>
                         <p style="font-size: 14px; color: #aaa;">PRESIDENT</p>
