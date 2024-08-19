@@ -103,86 +103,85 @@
         justify-content: space-between;
         align-items: center;
     }
+    #mainheading {
+    font-size: 200px; /* Adjust heading size as needed */
+    margin-left: 30%;
+  }
 
-    /* Media queries for responsiveness */
+    
+@media (max-width: 991px) {
+  .animation-container {
+    transform: scale(0.7); /* Scale down the entire container */
+    transform-origin: center;
+    width: 100%;
+    height: 100vh; /* Ensures full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents overflow issues */
+    position: relative; /* Ensure child elements are positioned relative to this container */
+  }
 
-    @media (max-width: 1200px) {
-        .animation-container {
-            width: 80%;
-        }
-        .rotating-flux-logo {
-            width: 200px;
-            height: 200px;
-            margin-left: 40px;
+  .rotating-flux-logo {
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 1rem; /* Space between logo and typing animation */
+  }
 
+  #typing-animation {
+    font-size: 25px; /* Adjust font size as needed */
+    color: rgb(255, 255, 255);
+            top: -180px;
+        left: -25px;
+    white-space: nowrap;
+    position: relative; /* Ensure it's within the bounds of the container */
+    animation: typing 4s steps(30, end) forwards;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+    border-right: 0; /* Hide the blinking cursor */
+  }
 
-        }
-        .line {
-            width: 1200px;
-            top: -27px;
-        }
-        #typing-animation {
-            font-size: 20px;
-            top: -27px;
-            left:-100px;
-            margin-left: 20px;
-        }
-        #mainheading{
-        	 left: -100px;
-        }
+  #mainheading {
+    font-size: 80px; /* Adjust heading size as needed */
+    text-align: center; /* Center heading */
+    margin: 0; /* Remove default margins */
+  }
+  .line {
+        width: 513px;
+        height: 2px;
+        background-color: grey;
+        position: relative;
+        top: -130px;
+        margin-left: 17%;
     }
+}
 
-    @media (max-width: 768px) {
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
 
-        .animation-container {
-            width: 100%;
-            flex-direction: column;
-            height: auto;
+.eventbox {
+  border: 1px solid #ccc; /* Border color */
+  padding: 20px; /* Spacing inside the box */
+  margin: 10px; /* Space around the box */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #fff; /* Background color */
+  text-align: center; /* Center align text */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+}
 
-        }
-        .rotating-flux-logo {
-            width: 0px;
-            height: 0px;
-            
-            
-        }
-        .line {
-            top:2px;
-        }
-        #typing-animation {
-            font-size: 14px;
-            
-            left:-140px;
-        }
-    }
+.eventbox:hover {
+  transform: scale(1.05); /* Slightly enlarge the box on hover */
+}
 
-    @media (max-width: 576px) {
-        .animation-container {
-            width: 100%;
-        }
-        .rotating-flux-logo {
-            width: 0px;
-            height: 0px;
-        }
-        .line {
-            width: 100%;
-        }
-        #typing-animation {
-            font-size: 16px;
-            left:-220px;
-        }
-    }
-
-    @media (max-width: 400px) {
-        .rotating-flux-logo {
-            width: 0px;
-            height: 0px;
-        }
-        #typing-animation {
-            font-size: 14px;
-            left:-100px;
-        }
-    }
+@media (max-width: 768px) {
+  .eventbox {
+    padding: 10px; /* Reduced padding for smaller screens */
+    margin: 5px; /* Reduced margin for smaller screens */
+  }
+}
 
     </style>
   </head>
@@ -216,7 +215,7 @@
                       <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
                           <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
                               <div class="text">
-                                  <h1 class="mb-4 mt-3" id="mainheading" style="font-size: 200px; margin-left: 30%;"><span>FLUX</span></h1>
+                                  <h1 class="mb-4 mt-3" id="mainheading"><span>FLUX</span></h1>
                                   <div class="animation-container">
                                       <div id="rotating-flux-logo" class="rotating-flux-logo" style="background-image:url(https://i.ibb.co/hR65N61/62787098724.png)";></div>
                                       <div class="line"></div>
@@ -316,54 +315,45 @@
           </div>
         </div>
         <section class="ftco-section ftco-no-pb" id="events-section">
-    <div class="container">
-        <div class="row justify-content-center pb-5">
-                <div class="row d-flex">
-                    <!-- Adjust the column size to fit more items in a row -->
-                    <div class="col-md-3 col-lg-3 d-flex ftco-animate">
-                        <div class="blog-entry justify-content-end" style="padding: 10px; border-radius: 10px;">
-                            <a href="https://docs.google.com/document/d/115bW5AbId5wkTGYLRb5iDDXndA0tHybbbQfltS4ozlA/edit?usp=sharing" class="block-20 zoom-effect" style="background-image: url('https://i.ibb.co/ZghYKLr/iocus.jpg'); background-size: cover; border-radius: 10px;">
-                            </a>
-                            <div class="text mt-3 float-right d-block">
-                                <h3 class="heading"><a href="https://docs.google.com/document/d/115bW5AbId5wkTGYLRb5iDDXndA0tHybbbQfltS4ozlA/edit?usp=sharing">IOCUS FLUXUS</a></h3>
-                                <p>Participants will take part in a game called IOCUS FLUXUS, i.e., the flow of fun.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-lg-3 d-flex ftco-animate">
-                        <div class="blog-entry justify-content-end" style="padding: 10px; border-radius: 10px;">
-                            <a href="https://docs.google.com/document/d/1omMJrvF8GVBaaJ9UwCEysASS_bTOmT1DHRyUipQ38i8/edit?usp=sharing" class="block-20 zoom-effect" style="background-image: url('https://i.ibb.co/ZTgL7Ls/aquajet.jpg'); background-size: cover; border-radius: 10px;">
-                            </a>
-                            <div class="text mt-3 float-right d-block">
-                                <h3 class="heading"><a href="https://docs.google.com/document/d/1omMJrvF8GVBaaJ9UwCEysASS_bTOmT1DHRyUipQ38i8/edit?usp=sharing">AQUAJET</a></h3>
-                                <p>Making a working model of an aqua-jet using reusable, waste material like plastic, DVDs, etc.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-lg-3 d-flex ftco-animate">
-                        <div class="blog-entry justify-content-end" style="padding: 10px; border-radius: 10px;">
-                            <a href="https://docs.google.com/document/d/1p1LquB2-DaHsQLFkgBsSq-3Fr4cLqSFUJYNS7zGIJDo/edit?usp=sharing" class="block-20 zoom-effect" style="background-image: url('https://i.ibb.co/TqgcL16/modelmaking.jpg'); background-size: cover; border-radius: 10px;">
-                            </a>
-                            <div class="text mt-3 float-right d-block">
-                                <h3 class="heading"><a href="https://docs.google.com/document/d/1p1LquB2-DaHsQLFkgBsSq-3Fr4cLqSFUJYNS7zGIJDo/edit?usp=sharing">MODEL MAKING (ONLINE)</a></h3>
-                                <p>Create a detailed model demonstrating any one of the following physics concepts using recyclable materials.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-lg-3 d-flex ftco-animate">
-                        <div class="blog-entry justify-content-end" style="padding: 10px; border-radius: 10px;">
-                            <a href="https://docs.google.com/document/d/1UJybo0B7FOo1R2h1A_ZJpEL-y8HZMY5lHXpARFvlwao/edit?usp=sharing" class="block-20 zoom-effect" style="background-image: url('https://i.ibb.co/BrT9w3F/phyfics.jpg'); background-size: cover; border-radius: 10px;">
-                            </a>
-                            <div class="text mt-3 float-right d-block">
-                                <h3 class="heading"><a href="https://docs.google.com/document/d/1UJybo0B7FOo1R2h1A_ZJpEL-y8HZMY5lHXpARFvlwao/edit?usp=sharing">PHYFICS</a></h3>
-                                <p>Teams have to create a presentation dedicated to exploring the science behind one selected physics/science fiction film.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div style="display: flex; justify-content: center; flex-wrap: wrap;">
+
+        <!-- Event 1 -->
+        <div class="eventbox col-md col-12 " style="width: 23%; margin: 1%; background: rgba(0, 0, 0, 0.6); border: 2px solid #444; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); border-radius: 10px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          <a href="https://docs.google.com/document/d/115bW5AbId5wkTGYLRb5iDDXndA0tHybbbQfltS4ozlA/edit?usp=sharing" style="display: block; height: 200px; background-image: url('https://i.ibb.co/ZghYKLr/iocus.jpg'); background-size: cover; background-position: center; border-radius: 10px;"></a>
+          <div style="padding: 15px; text-align: center;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 15px;"><a href="https://docs.google.com/document/d/115bW5AbId5wkTGYLRb5iDDXndA0tHybbbQfltS4ozlA/edit?usp=sharing" style="color: #e0e0e0; text-decoration: none;">IOCUS FLUXUS</a></h3>
+            <p style="font-size: 1rem;">Participants will take part in a game called IOCUS FLUXUS, i.e., the flow of fun.</p>
+          </div>
         </div>
-    </div>
+
+        <!-- Event 2 -->
+        <div class="eventbox col-md col-12 " style="width: 23%; margin: 1%; background: rgba(0, 0, 0, 0.6); border: 2px solid #444; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); border-radius: 10px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          <a href="https://docs.google.com/document/d/1omMJrvF8GVBaaJ9UwCEysASS_bTOmT1DHRyUipQ38i8/edit?usp=sharing" style="display: block; height: 200px; background-image: url('https://i.ibb.co/ZTgL7Ls/aquajet.jpg'); background-size: cover; background-position: center; border-radius: 10px;"></a>
+          <div style="padding: 15px; text-align: center;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 15px;"><a href="https://docs.google.com/document/d/1omMJrvF8GVBaaJ9UwCEysASS_bTOmT1DHRyUipQ38i8/edit?usp=sharing" style="color: #e0e0e0; text-decoration: none;">AQUAJET</a></h3>
+            <p style="font-size: 1rem;">Making a working model of an aqua-jet using reusable, waste material like plastic, DVDs, etc.</p>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="eventbox col-md col-12 " style="width: 23%; margin: 1%; background: rgba(0, 0, 0, 0.6); border: 2px solid #444; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); border-radius: 10px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          <a href="https://docs.google.com/document/d/1p1LquB2-DaHsQLFkgBsSq-3Fr4cLqSFUJYNS7zGIJDo/edit?usp=sharing" style="display: block; height: 200px; background-image: url('https://i.ibb.co/TqgcL16/modelmaking.jpg'); background-size: cover; background-position: center; border-radius: 10px;"></a>
+          <div style="padding: 15px; text-align: center;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 15px;"><a href="https://docs.google.com/document/d/1p1LquB2-DaHsQLFkgBsSq-3Fr4cLqSFUJYNS7zGIJDo/edit?usp=sharing" style="color: #e0e0e0; text-decoration: none;">MODEL MAKING (ONLINE)</a></h3>
+            <p style="font-size: 1rem;">Create a detailed model demonstrating any one of the following physics concepts using recyclable materials.</p>
+          </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="eventbox col-md col-12 " style="width: 23%; margin: 1%; background: rgba(0, 0, 0, 0.6); border: 2px solid #444; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); border-radius: 10px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+          <a href="https://docs.google.com/document/d/1UJybo0B7FOo1R2h1A_ZJpEL-y8HZMY5lHXpARFvlwao/edit?usp=sharing" style="display: block; height: 200px; background-image: url('https://i.ibb.co/BrT9w3F/phyfics.jpg'); background-size: cover; background-position: center; border-radius: 10px;"></a>
+          <div style="padding: 15px; text-align: center;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 15px;"><a href="https://docs.google.com/document/d/1UJybo0B7FOo1R2h1A_ZJpEL-y8HZMY5lHXpARFvlwao/edit?usp=sharing" style="color: #e0e0e0; text-decoration: none;">PHYFICS</a></h3>
+            <p style="font-size: 1rem;">Teams have to create a presentation dedicated to exploring the science behind one selected physics/science fiction film.</p>
+          </div>
+        </div>
+
+      </div>
 </section>
 
 
@@ -443,6 +433,7 @@
   
 			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 	 Made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://github.com/fluxdpsd/fluxdpsd.github.io/blob/main/ps.png?raw=true" target="_blank"> FLUX ©</a>
+	 <br>Credits: Aatharv, Ashni
 	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 			</div>
 		  </div>
