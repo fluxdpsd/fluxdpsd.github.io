@@ -114,7 +114,7 @@
     transform: scale(0.7); /* Scale down the entire container */
     transform-origin: center;
     width: 100%;
-    height: 100vh; /* Ensures full height of the viewport */
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,36 +124,37 @@
   }
 
   .rotating-flux-logo {
-    width: 120px; /* Adjust size as needed */
-    height: auto;
-    margin-bottom: 1rem; /* Space between logo and typing animation */
+    position: absolute;
+    top:-200px;
+    width:100px;
+    height:100px;
   }
 
-  #typing-animation {
-    font-size: 25px; /* Adjust font size as needed */
-    color: rgb(255, 255, 255);
-            top: -180px;
-        left: -25px;
-    white-space: nowrap;
-    position: relative; /* Ensure it's within the bounds of the container */
-    animation: typing 4s steps(30, end) forwards;
-    overflow: hidden; /* Hide overflow to prevent scrollbars */
-    border-right: 0; /* Hide the blinking cursor */
-  }
+      #typing-animation {
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        top: 0px;
+        margin-right: 16%;
+        white-space: nowrap;
+        position: relative;
+        animation: typing 4s steps(30, end) forwards;
+        border-right: 0;
+    }
 
   #mainheading {
     font-size: 80px; /* Adjust heading size as needed */
     text-align: center; /* Center heading */
     margin: 0; /* Remove default margins */
   }
-  .line {
-        width: 513px;
+      .line {
+        width: 400px;
         height: 2px;
         background-color: grey;
         position: relative;
-        top: -130px;
-        margin-left: 17%;
+        top: 30px;
+        margin-left: 2%;
     }
+
 }
 
 @keyframes typing {
@@ -183,6 +184,7 @@
   }
 }
 
+
     </style>
   </head>
 
@@ -190,6 +192,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
         <div class="container">
+        	
           <a class="navbar-brand" href="index.html">FLUX</a>
           <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
@@ -215,6 +218,7 @@
                       <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
                           <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
                               <div class="text">
+                              	<img class="small_logo d-lg-none d-block" style="width:300px;height:auto;margin: auto;" src="https://i.ibb.co/j5DBdz4/bg-1.png" >
                                   <h1 class="mb-4 mt-3" id="mainheading"><span>FLUX</span></h1>
                                   <div class="animation-container">
                                       <div id="rotating-flux-logo" class="rotating-flux-logo" style="background-image:url(https://i.ibb.co/hR65N61/62787098724.png)";></div>
@@ -261,7 +265,7 @@
                     <!-- Member 1 -->
                     <div class="member" style="width: 200px; text-align: center;">
                         <div class="image-wrapper" style="width: 200px; height: 200px; margin: 0 auto; border-radius: 50%; overflow: hidden; border: 2px solid #e6ac42;">
-                            <img src="" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="https://i.ibb.co/FVYRKMr/IMG-20231014-WA0013-2-1.jpg" alt="Member 1" style="width: 100%; height: 100%; ">
                         </div>
                         <h3 style="margin-top: 10px; font-size: 18px;">ATHARV SAXENA</h3>
                         <p style="font-size: 14px; color: #aaa;">PRESIDENT</p>
